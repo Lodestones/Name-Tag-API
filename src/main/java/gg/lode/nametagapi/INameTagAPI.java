@@ -5,6 +5,8 @@ import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.UUID;
+
 public interface INameTagAPI {
 
     void setNickname(Player player, String name);
@@ -19,5 +21,11 @@ public interface INameTagAPI {
     void resetSkin(Player player);
     void resetNick(Player player);
     boolean hasNick(Player player);
+    @Nullable String getNick(Player player);
+    @Nullable String getNick(UUID uniqueId);
+    @Nullable Component getNickComponent(Player player);
+    @Nullable Component getNickComponent(UUID uniqueId);
+    @Nullable Skin getSkin(Player player);
+    @Nullable Skin getSkin(UUID uniqueId);
 
 }
