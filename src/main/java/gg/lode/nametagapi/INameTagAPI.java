@@ -28,4 +28,6 @@ public interface INameTagAPI {
     @Nullable Skin getSkin(Player player);
     @Nullable Skin getSkin(UUID uniqueId);
 
+    void reset();
+
 }
