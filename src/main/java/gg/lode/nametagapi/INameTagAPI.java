@@ -13,8 +13,11 @@ public interface INameTagAPI {
     void setNickname(Player player, Component component);
     void setSkinFromPlayer(Player player, String playerName);
     void setNickFromPlayer(Player player, String playerName);
-    boolean setSkinFromMineskinFromId(Player player, String id);
+    boolean setSkinFromMineskinId(Player player, String id);
     boolean setSkinFromMineskinUrl(Player player, String url);
+    boolean setSkinFromTextureAndSignature(Player player, String texture, String signature);
+    
+
     @Nullable Skin getSkinFromMineskinId(String id);
     @Nullable Skin getSkinFromMineskinUrl(String url);
     void resetNickname(Player player);
