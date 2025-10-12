@@ -21,16 +21,29 @@ public interface INameTagAPI {
     @Nullable Skin getSkinFromMineskinId(String id);
     @Nullable Skin getSkinFromMineskinUrl(String url);
     void resetNickname(Player player);
+
     void resetSkin(Player player);
+
     void resetNick(Player player);
+
     boolean hasNick(Player player);
+
     @Nullable String getNick(Player player);
+
     @Nullable String getNick(UUID uniqueId);
+
     @Nullable Component getNickComponent(Player player);
+
     @Nullable Component getNickComponent(UUID uniqueId);
+
     @Nullable Skin getSkin(Player player);
+
     @Nullable Skin getSkin(UUID uniqueId);
 
-    void reset();
+    void resetAllNicks();
+
+    void shouldChangeUniqueId(boolean shouldChange);
+
+    boolean shouldChangeUniqueId();
 
 }

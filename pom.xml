@@ -6,7 +6,7 @@
 
     <groupId>gg.lode</groupId>
     <artifactId>Name-Tag-API</artifactId>
-    <version>1.0.12</version>
+    <version>1.0.13</version>
     <packaging>jar</packaging>
 
     <name>Name-Tag-API</name>
