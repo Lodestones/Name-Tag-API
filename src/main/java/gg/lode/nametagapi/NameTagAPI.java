@@ -1,8 +1,9 @@
 package gg.lode.nametagapi;
 
 /**
- * Official API of the Name Tag Plugin
- * This interface allows access to certain internals of the world border plugin.
+ * Copyright 2025 - Lodestone Services LLC
+ * <p>
+ * This interface allows access to certain internals of the NickAPI plugin.
  *
  * @author John Aquino
  */
@@ -12,7 +13,6 @@ public class NameTagAPI {
 
     /**
      * Internal use of the API for Name Tag to use.
-     * DO NOT TOUCH!!
      * @param api {@link INameTagAPI}
      */
     public static void setApi(INameTagAPI api) {

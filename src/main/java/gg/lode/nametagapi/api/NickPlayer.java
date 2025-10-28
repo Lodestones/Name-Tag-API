@@ -4,6 +4,11 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
+/**
+ * Copyright 2025 - Lodestone Services LLC
+ *
+ * @author John Aquino
+ */
 public class NickPlayer {
     private final UUID uuid;
     private final UUID originalUniqueId;

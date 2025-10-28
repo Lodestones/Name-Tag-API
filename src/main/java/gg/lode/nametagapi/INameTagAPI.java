@@ -7,19 +7,32 @@ import org.jetbrains.annotations.Nullable;
 
 import java.util.UUID;
 
+/**
+ * Copyright 2025 - Lodestone Services LLC
+ *
+ * @author John Aquino
+ */
 public interface INameTagAPI {
 
     void setNickname(Player player, String name);
+
     void setNickname(Player player, Component component);
+
     void setSkinFromPlayer(Player player, String playerName);
+
     void setNickFromPlayer(Player player, String playerName);
+
     boolean setSkinFromMineskinId(Player player, String id);
+
     boolean setSkinFromMineskinUrl(Player player, String url);
+
     boolean setSkinFromTextureAndSignature(Player player, String texture, String signature);
-    
+
 
     @Nullable Skin getSkinFromMineskinId(String id);
+
     @Nullable Skin getSkinFromMineskinUrl(String url);
+
     void resetNickname(Player player);
 
     void resetSkin(Player player);
