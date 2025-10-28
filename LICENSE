@@ -1,21 +1,52 @@
-MIT License
-
 Copyright (c) 2025 Lodestone Services LLC
 
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
+This license allows you to use the software for free, develop it, and
+improve it, as long as you do not use it to make money without getting
+permission.
 
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
+Acceptance
+In order to get this license, you must agree to its rules. Those rules
+are both obligations under that agreement and conditions to your
+license. Don’t do anything with the software that triggers a rule you
+can’t or won’t follow.
 
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
+Notices
+Make sure everyone who gets a copy of any part of this software from
+you, with or without changes, also gets the text of this license and the
+notices above.
+
+Personal Uses
+Personal use of the software, whether by an individual or organization,
+is allowed, even for profit. Personal use does not include use for a
+company, business, or organization, even a non-profit one.
+
+Noncommercial Organizations
+Use of the software for research or teaching by a noncommercial
+organization is allowed, unless it competes with the business of the
+licensor.
+
+No Other Uses
+You may not use the software in any other way, including for
+commercial purposes. The following are commercial purposes under this
+license:
+
+1. running the software as a service for others
+2. using the software in a way that reduces the need for paid service
+   or support by the licensor
+3. distributing the software or its parts
+4. making changes or new works based on the software
+
+Patent Defense
+If you attack or assist in attacking any patent claim related to the
+software, you lose all rights under this license.
+
+Violations
+The first time you violate a rule under this license, your use
+continues for 32 days after notice of the violation, but then ends
+permanently. If you violate again, your use ends immediately.
+
+No Liability
+**As far as the law allows, the software comes as-is, without any
+warranty or condition, and the licensor will not be liable to you for
+any damages arising out of these terms or the use or nature of the
+software, under any kind of legal claim.**
