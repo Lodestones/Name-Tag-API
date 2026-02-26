@@ -53,6 +53,8 @@ public interface INameTagAPI {
 
     @Nullable Skin getSkin(UUID uniqueId);
 
+    void randomNick(Player player);
+
     void resetAllNicks();
 
     void shouldChangeUniqueId(boolean shouldChange);
