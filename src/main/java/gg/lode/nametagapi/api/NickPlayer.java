@@ -26,6 +26,8 @@ public class NickPlayer {
     private String nickedTexture;
     private String nickedSignature;
     private UUID nickedUniqueId;
+    // Fake rank (LuckPerms group name, null = none)
+    private String fakeRankId;
 
     public NickPlayer(UUID uuid) {
         this.uuid = uuid;
@@ -111,6 +113,7 @@ public class NickPlayer {
         this.nickedTexture = null;
         this.nickedSignature = null;
         this.nickedUniqueId = this.originalUniqueId;
+        this.fakeRankId = null;
     }
 
     // Original data getters/setters
@@ -178,5 +181,14 @@ public class NickPlayer {
 
     public boolean isCurrentlyNicked() {
         return hasNick();
+    }
+
+    @Nullable
+    public String getFakeRankId() {
+        return fakeRankId;
+    }
+
+    public void setFakeRankId(@Nullable String fakeRankId) {
+        this.fakeRankId = fakeRankId;
     }
 } 
