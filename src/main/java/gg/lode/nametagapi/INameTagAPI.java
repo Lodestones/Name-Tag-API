@@ -55,6 +55,34 @@ public interface INameTagAPI {
 
     void randomNick(Player player);
 
+    /**
+     * Randomizes the player's nick and assigns a specific fake rank for TAB display.
+     * Permissions are unaffected — only the TAB prefix/suffix changes.
+     * Requires LuckPerms. If the group doesn't exist, the nick is still applied without a rank.
+     */
+    void randomNick(Player player, String groupName);
+
+    /**
+     * Nicks the player as an existing player's skin/name, with a specific fake rank for TAB display.
+     */
+    void setNickFromPlayer(Player player, String playerName, String groupName);
+
+    /**
+     * Sets only the display name, with a specific fake rank for TAB display.
+     */
+    void setNickname(Player player, String name, String groupName);
+
+    /**
+     * Applies a fake rank override for TAB display (prefix/suffix) without changing the nick.
+     * Requires LuckPerms. Passing an unknown group has no effect.
+     */
+    void setFakeRank(Player player, String groupName);
+
+    /**
+     * Clears the fake rank override, restoring LuckPerms-driven TAB display.
+     */
+    void clearFakeRank(Player player);
+
     void resetAllNicks();
 
     void shouldChangeUniqueId(boolean shouldChange);
