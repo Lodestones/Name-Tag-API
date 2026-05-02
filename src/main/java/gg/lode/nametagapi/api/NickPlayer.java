@@ -28,6 +28,9 @@ public class NickPlayer {
     private UUID nickedUniqueId;
     // Fake rank (LuckPerms group name, null = none)
     private String fakeRankId;
+    // Hot-path cache: legacy-section-serialized display name. Computed lazily by
+    // packet listeners that fire per tick; invalidated whenever the nick changes.
+    private transient String cachedLegacyName;
 
     public NickPlayer(UUID uuid) {
         this.uuid = uuid;
@@ -47,6 +50,7 @@ public class NickPlayer {
     public void setNickname(@Nullable String nickname) {
         this.nickname = nickname;
         this.nickedName = nickname;
+        this.cachedLegacyName = null;
     }
 
     @Nullable
@@ -114,6 +118,16 @@ public class NickPlayer {
         this.nickedSignature = null;
         this.nickedUniqueId = this.originalUniqueId;
         this.fakeRankId = null;
+        this.cachedLegacyName = null;
+    }
+
+    @Nullable
+    public String getCachedLegacyName() {
+        return cachedLegacyName;
+    }
+
+    public void setCachedLegacyName(@Nullable String cachedLegacyName) {
+        this.cachedLegacyName = cachedLegacyName;
     }
 
     // Original data getters/setters
@@ -169,6 +183,7 @@ public class NickPlayer {
     public void setNickedName(String nickedName) {
         this.nickedName = nickedName;
         this.nickname = nickedName;
+        this.cachedLegacyName = null;
     }
 
     public String getNickedTexture() {
