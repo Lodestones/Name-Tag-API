@@ -4,7 +4,7 @@ import org.bukkit.plugin.java.JavaPlugin;
 
 /**
  * Lifecycle contract that the runtime-loaded Name Tag implementation
- * fulfils. The public {@code Name-Tag-Paper} jar is a JavaPlugin shim that
+ * fulfils. The public {@code Name-Tag-Loader} jar is a JavaPlugin shim that
  * loads an implementation (via cloud or local jar), instantiates the entry
  * class, and forwards Bukkit lifecycle calls to it.
  *
