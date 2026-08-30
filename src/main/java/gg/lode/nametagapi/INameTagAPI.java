@@ -56,6 +56,26 @@ public interface INameTagAPI {
     void randomNick(Player player);
 
     /**
+     * Generates a single random, available nickname without touching any
+     * online {@link Player}. Intended for consumers that disguise non-player
+     * entities (e.g. packet NPCs). Performs network calls (cloud nick service
+     * and/or Mojang availability checks) — call OFF the main thread.
+     *
+     * @return a random username, or {@code null} if generation failed.
+     */
+    @Nullable String getRandomNick();
+
+    /**
+     * Returns a random skin (texture + signature) drawn from the built-in skin
+     * pool, without touching any online {@link Player}. Intended for consumers
+     * that disguise non-player entities (e.g. packet NPCs). Performs a Mojang
+     * fetch — call OFF the main thread.
+     *
+     * @return a random {@link Skin}, or {@code null} if the fetch failed.
+     */
+    @Nullable Skin getRandomSkin();
+
+    /**
      * Randomizes the player's nick and assigns a specific fake rank for TAB display.
      * Permissions are unaffected — only the TAB prefix/suffix changes.
      * Requires LuckPerms. If the group doesn't exist, the nick is still applied without a rank.

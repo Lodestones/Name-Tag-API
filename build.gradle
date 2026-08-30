@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'gg.lode'
-version = '1.0.3'
+version = '1.0.4'
 
 java {
     toolchain {
@@ -35,7 +35,7 @@ tasks.withType(JavaCompile).configureEach {
 shadowJar {
     archiveClassifier.set('')
     archiveBaseName.set('Name-Tag-API')
-    archiveVersion.set('1.0.3')
+    archiveVersion.set('1.0.4')
 }
 
 jar {
