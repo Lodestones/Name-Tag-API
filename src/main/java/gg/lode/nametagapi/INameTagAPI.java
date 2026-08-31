@@ -1,6 +1,7 @@
 package gg.lode.nametagapi;
 
 import gg.lode.nametagapi.api.Skin;
+import gg.lode.nametagapi.api.nick.NickRequest;
 import net.kyori.adventure.text.Component;
 import org.bukkit.entity.Player;
 import org.jetbrains.annotations.Nullable;
@@ -56,6 +57,21 @@ public interface INameTagAPI {
     void randomNick(Player player);
 
     /**
+     * Nicks the player with a random name matching the given request.
+     * <p>
+     * A filtered request is answered by the shared pool directly rather than
+     * from the warm local pool, which holds unfiltered names only — so unlike
+     * {@link #randomNick(Player)} it costs a network round-trip and the nick
+     * lands a moment later. Filters narrow the pool without binding it: when
+     * too few names match, the pool widens rather than failing, so the name
+     * may not honour every part of the request.
+     *
+     * @param request what kind of name to ask for; {@link NickRequest#any()}
+     *                behaves exactly like {@link #randomNick(Player)}
+     */
+    void randomNick(Player player, NickRequest request);
+
+    /**
      * Generates a single random, available nickname without touching any
      * online {@link Player}. Intended for consumers that disguise non-player
      * entities (e.g. packet NPCs). Performs network calls (cloud nick service
@@ -64,6 +80,24 @@ public interface INameTagAPI {
      * @return a random username, or {@code null} if generation failed.
      */
     @Nullable String getRandomNick();
+
+    /**
+     * Generates a single random nickname matching the given request, without
+     * touching any online {@link Player}. Performs network calls — call OFF
+     * the main thread.
+     * <p>
+     * The name is <strong>not</strong> reserved. With no player to hold it,
+     * the claim on the shared pool is handed straight back, so the same name
+     * may go to someone else moments later. Fine for disguising a packet NPC;
+     * not something to persist.
+     * <p>
+     * Filters narrow the pool without binding it — see
+     * {@link #randomNick(Player, NickRequest)}.
+     *
+     * @param request what kind of name to ask for
+     * @return a random username, or {@code null} if generation failed.
+     */
+    @Nullable String getRandomNick(NickRequest request);
 
     /**
      * Returns a random skin (texture + signature) drawn from the built-in skin
